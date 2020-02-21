@@ -1,0 +1,17 @@
+<div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path 'cocktails.jpg' %>');">
+  <div class="container">
+    <h1>Dodoo Bistro</h1>
+    <p><span id="banner-typed-text"></span></p>
+  </div>
+</div>
+
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <div class="card-description">
+        <h2><%= cocktail.name %></h2>
+      </div>
+      <%= link_to "details", cocktail_path(cocktail), class: "card-link" %>
+    </div>
+  <% end %>
+</div>
